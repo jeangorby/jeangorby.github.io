@@ -11,9 +11,105 @@ h2 { border-bottom: 2px solid #000; padding-bottom: 0.5rem; }
 .project h3 { margin: 0.2rem 0; }
 footer { text-align: center; background: #000; color: #fff; padding: 1rem; margin-top: 2rem; }
 
+/* Main page photo settings*/
 .profile-photo {
     display: block;
     margin: 1rem auto;
     width: 200px;
     border-radius: 60%;
+  }
+
+/* Instructional video settings*/
+.video-gallery {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+.video-thumb {
+width: 200px;
+border-radius: 8px;
+transition: transform 0.2s ease;
+}
+.video-thumb:hover {
+transform: scale(1.05);
+}
+
+/* Teaching card settings */
+.teaching-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .teaching-card h3 {
+    margin-top: 0;
+    color: #cc4444;
+  }
+
+/* Course card settings */
+.course-section {
+    margin: 2rem auto;
+    max-width: 1100px;
+  }
+  .course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .card h2 {
+    margin-top: 0;
+    color: #cc4444;
+  }
+  .card ul {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  /* Student evaluations settings */
+
+  .header-block {
+    background: #ff9999;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .collapsible summary {
+    background: #ff9999;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    list-style: none;
+    transition: background 0.2s ease;
+  }
+  .collapsible summary:hover {
+    background: #cc4444;
+  }
+  .collapsible[open] summary::after {
+    content: " ▲";
+  }
+  .collapsible summary::after {
+    content: " ▼";
+    float: right;
+    font-size: 0.9rem;
+  }
+  .collapsible ul {
+    margin: 0.5rem 0 0 1rem;
   }
