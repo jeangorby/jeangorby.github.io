@@ -18,13 +18,147 @@
     </nav>
   </header>
 
-  <main> 
-    <h2>LiDAR SLAM</h2>
-    <p>Full write-up, figures, GitHub links, etc.</p>
+  <!-- ECE 276A project 1 -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Orientation Tracking</h3>
+      <a href="files/projects/ECE_276a_Project_1.pdf" target="_blank" class="report-btn">View Report</a>
+    </div>
 
-    <h2>Dynamic Programming Gridworld</h2>
-    <p>Details, images, and demo links here.</p>
-  </main>
+    <p>
+      Developed algorithms to estimate the 3-D orientation of a rotating body using 
+      inertial measurement unit (IMU) data. Implemented IMU calibration, quaternion-based 
+      motion and observation models, and projected gradient descent optimization to refine 
+      orientation estimates. Validated against VICON ground-truth data and generated 
+      panoramic images by stitching camera frames using the estimated orientations.
+    </p>
+    
+    <ul class="tech-list">
+      <li>Python (NumPy, SciPy, JAX, Matplotlib)</li>
+      <li>Transforms3D & SciPy Spatial Transformations</li>
+      <li>Quaternion Kinematics & Optimization</li>
+      <li>Sensor Calibration (IMU, Camera)</li>
+      <li>Data Synchronization & Visualization</li>
+    </ul>
+
+  </div>
+
+  <!-- ECE 276A project 2 -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3>LiDAR-Based SLAM</h3>
+      <a href="files/projects/ECE_276a_Project_2.pdf" target="_blank" class="report-btn">View Report</a>
+    </div>
+
+    <p>
+      Implemented a full SLAM pipeline using encoder and IMU odometry, 2D LiDAR scans, 
+      and RGB-D measurements from a differential-drive robot. Developed motion models 
+      and scan-matching with ICP to refine odometry, built an occupancy grid map of the 
+      environment, and applied factor-graph optimization with GTSAM for loop closure. 
+      Extended mapping with RGB-D texture projection to create a colored floor map.
+    </p>
+
+    <ul class="tech-list">
+      <li>Python, NumPy, Open3D, OpenCV, Matplotlib</li>
+      <li>ICP scan matching</li>
+      <li>Occupancy grid mapping</li>
+      <li>Factor graph optimization (GTSAM)</li>
+      <li>Texture mapping with RGB-D</li>
+    </ul>
+  </div>
+
+  <!-- ECE 276A project 3 -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Visual-Inertial SLAM</h3> 
+      <a href="files/projects/ECE_276a_Project_3.pdf" target="_blank" class="report-btn">View Report</a> 
+    </div>
+
+    <p>
+      Implemented a Visual-Inertial Simultaneous Localization and Mapping (SLAM) system using an 
+      Extended Kalman Filter (EKF). Integrated IMU kinematics for prediction and stereo camera 
+      observations for correction to estimate robot trajectories and landmark positions. Developed 
+      modules for IMU-based localization, landmark initialization/mapping, and feature detection/tracking, 
+      and fused them into a full SLAM pipeline that reconstructs 2D/3D trajectories with visualized maps.
+    </p>
+      
+    <ul class="tech-list">
+      <li>Python (NumPy, SciPy, OpenCV, Matplotlib)</li>
+      <li>Extended Kalman Filter</li>
+      <li>SE(3) Kinematics</li>
+      <li>Stereo Vision & Feature Tracking</li>
+      <li>Sparse Matrix Optimization</li>
+    </ul>
+  </div>
+
+  <!-- ECE 276B project 1 -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Dynamic Programming: Door & Key Navigation</h3>
+      <a href="files/projects/ECE_276b_Project_1.pdf" target="_blank" class="report-btn">View Report</a>
+    </div>
+
+    <p>
+      Implemented dynamic programming to solve autonomous navigation in the MiniGrid Door & Key environment. 
+      Designed motion models and cost functions to optimize action sequences, enabling an agent to pick up keys, unlock doors, 
+      and reach goals with minimal energy. Developed policies for both fixed known maps and generalized strategies for 
+      random 10×10 environments with varying key, door, and goal placements.
+    </p>
+
+    <ul class="tech-list">
+      <li>Python</li>
+      <li>Dynamic Programming</li>
+      <li>Markov Decision Processes (MDP)</li>
+      <li>MiniGrid Gymnasium</li>
+      <li>Autonomous Navigation</li>
+    </ul>
+  </div>
+
+  <!-- ECE 276B project 2 -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3>3D Motion Planning</h3>
+      <a href="files/projects/ECE_276b_Project_2.pdf" target="_blank" class="report-btn">View Report</a>
+    </div>
+
+    <p>
+      Implemented collision checking, search-based planning (A*), and sampling-based planning (RRT, RRT*) 
+      in 3D environments. Compared performance across algorithms in terms of path quality, runtime, and 
+      efficiency in navigating complex obstacle spaces.
+    </p>
+    
+    <ul class="tech-list">
+      <li>Python</li>
+      <li>A*</li>
+      <li>RRT / RRT*</li>
+      <li>3D Collision Checking</li>
+      <li>Search-Based Planning</li>
+      <li>Sampling-Based Planning</li>
+    </ul>
+  </div>
+
+  <!-- ECE 276B project 3 -->
+  <div class="project-card"> 
+    <div class="project-header"> 
+      <h3>Safe Trajectory Tracking</h3> 
+      <a href="files/projects/ECE_276b_Project_3.pdf" target="_blank" class="report-btn">View Report</a> 
+    </div> 
+    
+    <p> 
+      Developed control policies for a differential-drive robot to track reference trajectories while avoiding obstacles under motion uncertainty. 
+      Implemented receding-horizon Certainty Equivalent Control (CEC) for deterministic approximation and Generalized Policy Iteration (GPI) for 
+      stochastic optimization with discretized state and control spaces. Evaluated performance on tracking accuracy, collision avoidance, and computational efficiency. 
+    </p> 
+    
+    <ul class="tech-list"> 
+      <li>Python</li> 
+      <li>Certainty Equivalent Control (CEC)</li> 
+      <li>Generalized Policy Iteration (GPI)</li> 
+      <li>Dynamic Programming</li> 
+      <li>Trajectory Tracking</li> 
+    </ul> 
+  </div>
+
 
   <footer>
     <p>© 2025 Jean Gorby Calicdan</p>

@@ -114,3 +114,62 @@ footer { text-align: center; background: #000; color: #fff; padding: 1rem; margi
 .collapsible ul {
     margin: 0.5rem 0 0 1rem;
   }
+
+/* Project cards */
+.project-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+.project-card h3 {
+    margin-top: 0;
+    color: #cc4444;
+  }
+
+.project-card p {
+  color: #333;
+}
+
+.tech-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.5rem 0;
+    list-style: none;
+  }
+.tech-list li {
+    background: #ffe5e5;
+    color: #cc4444;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+/* Report button */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.project-header h3 {
+  margin: 0;
+  color: #cc4444;
+}
+.report-btn {
+  display: inline-block;
+  background: #ff9999;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+.report-btn:hover {
+  background: #cc4444;
+}
