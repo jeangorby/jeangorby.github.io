@@ -20,6 +20,77 @@
 
   <section>
     <h1>Research</h1>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Modeling Strategic Users for Fair & Transparent Recommendation (2024-Present)</h3>
+        </div>
+
+        <p>
+          Developing reinforcement learning–based simulations to study how users strategize against recommender systems 
+          and how algorithms can remain fair and trustworthy under such dynamics. Implemented interactive simulations, 
+          dynamic preference modeling, and optimization pipelines to analyze tradeoffs between fairness, transparency, 
+          and personalization.
+        </p>
+
+        <h4>Literature Reviewed</h4>
+        <ul>
+          <li>
+            <a href="https://arxiv.org/abs/2312.17666" target="_blank">
+              User Strategization and Trustworthy Algorithms
+            </a> — Models human–algorithm interaction as a repeated game, highlighting how user 
+            strategization can distort data and reduce trust.
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2302.06559" target="_blank">
+              Recommending to Strategic Users
+            </a> — Shows how users strategically curate their consumption to shape recommendations, 
+            with implications for fairness and minority exposure.
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2309.08967" target="_blank">
+              The Impact of Recommendation Systems on Opinion Dynamics
+            </a> — Studies microscopic vs. macroscopic opinion shifts induced by personalization, 
+            linking recommender design to polarization.
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2404.12366v1" target="_blank">
+              Accounting for AI and Users Shaping One Another: The Role of Mathematical Models
+            </a> — Provides a broader framework for understanding how AI and users co-adapt, 
+            informing model-based approaches to trustworthy design.
+          </li>
+        </ul>
+
+        <h4>Research Contribution</h4>
+        <p>
+          Building on <em>User Strategization and Trustworthy Algorithms</em>, I extended their 
+          mathematical framework to incorporate <strong>dynamic user opinions</strong> rather 
+          than static preferences. This required reproducing and deeply analyzing the original 
+          simulation methods, then identifying how to adapt their equations to capture opinion 
+          evolution under strategic behavior. The result is a richer model of user–platform 
+          interaction that better reflects real-world dynamics.
+        </p>
+
+        <p>
+          On the computational side, I restructured the problem as a 
+          <strong>Markov Decision Process (MDP)</strong>, enabling me to formalize the 
+          platform’s optimization objective and model user strategization as sequential 
+          decision-making. I then developed simulation environments 
+          (<code>2312v2.py</code>, <code>functions.py</code>, <code>simulate.py</code>) 
+          and optimization routines (<code>optimize.py</code>) to implement and experiment 
+          with dynamic programming approaches for solving the MDP.
+        </p>
+
+        <ul class="tech-list">
+          <li>Python</li>
+          <li>Reinforcement Learning</li>
+          <li>Recommender Systems</li>
+        </ul>
+
+        <p class="status">📌 Ongoing project — results forthcoming</p>
+      </div>
+
+
   </section>
 
 
