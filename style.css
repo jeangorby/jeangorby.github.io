@@ -174,4 +174,42 @@ footer { text-align: center; background: #000; color: #fff; padding: 1rem; margi
   background: #cc4444;
 }
 
+/* tk dictionary */
 
+.dictionary-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.dictionary-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.word {
+  padding: 8px 14px;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.word:hover {
+  background: #6366f1;
+  color: white;
+  transform: translateY(-2px);
+}
