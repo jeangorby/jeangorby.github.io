@@ -191,7 +191,7 @@ footer { text-align: center; background: #000; color: #fff; padding: 1rem; margi
   color: #333;
 }
 
-.word-list {
+/* .word-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -206,7 +206,22 @@ footer { text-align: center; background: #000; color: #fff; padding: 1rem; margi
   font-size: 14px;
   transition: all 0.2s ease;
   cursor: pointer;
+} */
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;              /* more breathing room */
+  justify-content: center;
+  max-width: 600px;      /* constrain width */
+  margin: 0 auto;
 }
+
+.word {
+  padding: 10px 16px;    /* slightly bigger */
+  font-size: 15px;
+}
+
 
 .word:hover {
   background: #6366f1;
