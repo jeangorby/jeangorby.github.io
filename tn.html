@@ -100,18 +100,21 @@
     word.addEventListener('click', () => {
       popupWord.textContent = word.textContent;
       popupDef.textContent = word.getAttribute('data-definition');
-      popup.style.display = 'flex';
+      // popup.style.display = 'flex';
+      popup.classList.add('show');
     });
   });
 
   closeBtn.addEventListener('click', () => {
-    popup.style.display = 'none';
+    // popup.style.display = 'none';
+    popup.classList.remove('show');
   });
 
   // Close when clicking outside
   popup.addEventListener('click', (e) => {
     if (e.target === popup) {
-      popup.style.display = 'none';
+      // popup.style.display = 'none';
+      popup.classList.remove('show');
     }
   });
 </script>
