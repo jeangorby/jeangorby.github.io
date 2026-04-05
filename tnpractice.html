@@ -14,24 +14,6 @@
 </header>
 
 
-<div id="definition-box">
-    <p>Click a word to see its meaning</p>
-  </div>
-  <script>
-    const words = document.querySelectorAll('.word');
-    const box = document.getElementById('definition-box');
-
-    words.forEach(word => {
-      word.addEventListener('click', () => {
-        const definition = word.getAttribute('data-definition');
-        box.innerHTML = `
-          <h3>${word.textContent}</h3>
-          <p>${definition}</p>
-        `;
-      });
-    });
-  </script>
-
   <section>
   <div class="dictionary-container">
     <h2>Word List</h2>
@@ -74,6 +56,42 @@
     </div>
   </div>
 </section>
+
+  <div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="close-btn">&times;</span>
+    <h2 id="popup-word"></h2>
+    <p id="popup-definition"></p>
+  </div>
+</div>
+
+<script>
+  const words = document.querySelectorAll('.word');
+  const popup = document.getElementById('popup');
+  const popupWord = document.getElementById('popup-word');
+  const popupDef = document.getElementById('popup-definition');
+  const closeBtn = document.getElementById('close-btn');
+
+  words.forEach(word => {
+    word.addEventListener('click', () => {
+      popupWord.textContent = word.textContent;
+      popupDef.textContent = word.getAttribute('data-definition');
+      popup.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+  // Close when clicking outside
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+</script>
+
 
 </body>
 </html>
