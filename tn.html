@@ -84,9 +84,46 @@
 <script>
 
   const dictionary = {
-    "right neow": "means something happening immediately",
-    "algorizzm": "a funny version of algorithm",
-    "geografree": "a playful twist on geography"
+    // miscellaneous words
+    "right neow": "when things are happening right now",
+    "algorizzm": "twitch algorithm",
+    "geografree": "geography",
+    "delayage": "when tn says she's gonna stream early but ends up streaming at 10pm",
+    "massatwoshits": "believe it or not she was tryna say massachussetts",
+    "lemonadian": "when you're a lemon i guess",
+    "complicationals": "when people say complicated things in chat",
+    "huzzationship": "a situationship with the huzz",
+    "huzzationed": "when you're currently in a situationship with the huzz",
+    "screensharts": "a screenshot (idk how she managed to say this)",
+    "depressionalution": "depression",
+    "studiedaludied": "when you've studied a lot for your test",
+
+    // -ization words
+    "typolization": "when you make a typing error",
+    "delayagization": "when tn delays her stream",
+    "summonilization": "when we summon certain viewers into the stream",
+    "distractedlization": "tn when she's distracted 24/7",
+    "donationalization": "when tn gets donations (pls send her money)",
+    "timeization": "yeah i have no idea what this means",
+    "believableization": "when something is believable i guess",
+    "pilotization": "when youre a pilot",
+    "lemonization": "idk what the lemon words mean",
+    "solutionalization": "the solution to any problem",
+    "separationalized": "when you separate things or people",
+    "comparisonalized": "when you compare two things or people",
+    "fryization": "i have no idea what this means",
+
+    // -anese words
+    "tienanese": "the people who watch TN streams",
+    "canadianese": "the people of Canada",
+    "vitaminese": "the people of Vietnam",
+    "philippinese": "the people of the Philippines",
+    "hawaiianese": "the people of Hawaii",
+    "frenchanese": "the people of France or the French language",
+    "englishanese": "the english language",
+    "orangeanese": "i have no idea why she said this",
+    "lemonadanese": "i have no idea what this means",
+    "lemonadianese": "i also have no idea what this means"
   };
 
 </script>
@@ -106,7 +143,7 @@
   const popupWord = document.getElementById('popup-word');
   const popupDef = document.getElementById('popup-definition');
   const closeBtn = document.getElementById('close-btn');
-  
+
   words.forEach(word => {
     word.addEventListener('click', () => {
       const text = word.textContent.trim();
