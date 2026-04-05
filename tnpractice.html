@@ -66,17 +66,41 @@
 </div>
 
 <script>
+const dictionary = {
+  "right neow": "means something happening immediately",
+  "algorizzm": "a funny version of algorithm",
+  "geografree": "a playful twist on geography"
+};
+</script>
+
+
+<script>
+  // const words = document.querySelectorAll('.word');
+  // const popup = document.getElementById('popup');
+  // const popupWord = document.getElementById('popup-word');
+  // const popupDef = document.getElementById('popup-definition');
+  // const closeBtn = document.getElementById('close-btn');
+
+  // words.forEach(word => {
+  //   word.addEventListener('click', () => {
+  //     popupWord.textContent = word.textContent;
+  //     popupDef.textContent = word.getAttribute('data-definition');
+  //     popup.style.display = 'flex';
+  //   });
+  // });
   const words = document.querySelectorAll('.word');
   const popup = document.getElementById('popup');
   const popupWord = document.getElementById('popup-word');
   const popupDef = document.getElementById('popup-definition');
-  const closeBtn = document.getElementById('close-btn');
 
   words.forEach(word => {
     word.addEventListener('click', () => {
-      popupWord.textContent = word.textContent;
-      popupDef.textContent = word.getAttribute('data-definition');
-      popup.style.display = 'flex';
+      const text = word.textContent.trim();
+
+      popupWord.textContent = text;
+      popupDef.textContent = dictionary[text] || "No definition found";
+
+      popup.classList.add('show');
     });
   });
 
