@@ -281,16 +281,6 @@ footer { text-align: center; background: #000; color: #fff; padding: 1rem; margi
   animation: fadeIn 0.2s ease;
 }
 
-/* @keyframes fadeIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-} */
 
 .word.highlighted {
   background: #6366f1; /* bright yellow highlight */
