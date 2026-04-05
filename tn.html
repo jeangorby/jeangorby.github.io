@@ -144,27 +144,68 @@
   const popupDef = document.getElementById('popup-definition');
   const closeBtn = document.getElementById('close-btn');
 
+  let currentWord = null; // keep track of the currently clicked word
+
   words.forEach(word => {
     word.addEventListener('click', () => {
-      const text = word.textContent.trim();
+      // Remove highlight from previously clicked word
+      if (currentWord) {
+        currentWord.classList.remove('highlighted');
+      }
 
+      // Highlight the new word
+      word.classList.add('highlighted');
+      currentWord = word;
+
+      const text = word.textContent.trim();
       popupWord.textContent = text;
       popupDef.textContent = dictionary[text] || "No definition found";
-
       popup.classList.add('show');
     });
   });
 
+  // Close button
   closeBtn.addEventListener('click', () => {
     popup.classList.remove('show');
+    if (currentWord) {
+      currentWord.classList.remove('highlighted');
+      currentWord = null;
+    }
   });
 
   // Close when clicking outside
   popup.addEventListener('click', (e) => {
     if (e.target === popup) {
       popup.classList.remove('show');
+      if (currentWord) {
+        currentWord.classList.remove('highlighted');
+        currentWord = null;
+      }
     }
   });
+
+
+  // words.forEach(word => {
+  //   word.addEventListener('click', () => {
+  //     const text = word.textContent.trim();
+
+  //     popupWord.textContent = text;
+  //     popupDef.textContent = dictionary[text] || "No definition found";
+
+  //     popup.classList.add('show');
+  //   });
+  // });
+
+  // closeBtn.addEventListener('click', () => {
+  //   popup.classList.remove('show');
+  // });
+
+  // // Close when clicking outside
+  // popup.addEventListener('click', (e) => {
+  //   if (e.target === popup) {
+  //     popup.classList.remove('show');
+  //   }
+  // });
 </script>
 
 
