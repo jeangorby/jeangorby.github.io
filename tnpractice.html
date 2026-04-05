@@ -14,6 +14,24 @@
 </header>
 
 
+<div id="definition-box">
+    <p>Click a word to see its meaning</p>
+  </div>
+  <script>
+    const words = document.querySelectorAll('.word');
+    const box = document.getElementById('definition-box');
+
+    words.forEach(word => {
+      word.addEventListener('click', () => {
+        const definition = word.getAttribute('data-definition');
+        box.innerHTML = `
+          <h3>${word.textContent}</h3>
+          <p>${definition}</p>
+        `;
+      });
+    });
+  </script>
+
   <section>
   <div class="dictionary-container">
     <h2>Word List</h2>

@@ -233,3 +233,20 @@ footer { text-align: center; background: #000; color: #fff; padding: 1rem; margi
   color: #555;
 }
 
+#definition-box {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+#definition-box h3 {
+  margin-bottom: 8px;
+}
+
+.word {
+  cursor: pointer;
+}
